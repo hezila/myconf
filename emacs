@@ -118,12 +118,6 @@ your recently and most frequently used commands.")
 ;;主题
 (load-theme 'monokai t)
 
-;; 多点编辑
-;;(require 'multiple-cursors)
-;;(global-set-key (kbd "M-l") 'mc/edit-lines)
-;;(global-set-key (kbd "M-p") 'mc/mark-previous-like-this)
-;;(global-set-key (kbd "M-n") 'mc/mark-next-like-this)
-
 ;; smartparens
 (require 'smartparens-config)
 (show-smartparens-global-mode t)
@@ -133,26 +127,11 @@ your recently and most frequently used commands.")
       '((sequence "TODO" "|" "DONE" "ABANDON")))
 (setq org-startup-indented t)
 
-;; Add by emacs
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(enh-ruby-check-syntax nil)
- '(safe-local-variable-values (quote ((encoding . utf-8)))))
-(custom-set-faces
- '(flymake-errline ((((class color)) (:background "#292929" :foreground "BrightRed"))))
- '(flymake-warnline ((((class color)) (:background "#292929" :foreground "Golden")))))
-
 ;; makrdown-model
 (autoload 'markdown-mode "markdown-mode"
   "Major mode for editing Markdown files" t)
 (add-to-list 'auto-mode-alist '("\\.text\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("README\\.md\\'" . markdown-mode))
-
-;; neotree
-;; (setq projectile-switch-project-action 'neotree-projectile-action)
 
 ;;window-numbering
 (require 'window-numbering)
@@ -211,66 +190,6 @@ your recently and most frequently used commands.")
 
 ;;自动跟踪link
 (setq vc-follow-symlinks t)
-
-;;错误处理
-(require 'flymake-easy)
-(flymake-mode t)
-(require 'flymake-ruby)
-(add-hook 'enh-ruby-mode-hook 'flymake-ruby-load)
-(eval-after-load "go-mode" '(require 'flymake-go))
-(require 'flymake-cursor)
-
-;;raml show as yaml
-(add-to-list 'auto-mode-alist '("\\.raml?\\'" . yamly-mode))
-
-;;js tab size 2
-(setq js-indent-level 2)
-
-;;ag
-(defun ag ()
-  (interactive)
-  (helm-ag (projectile-project-root)))
-
-;; multi-term
-(require 'multi-term)
-(setq multi-term-program "/bin/zsh")
-
-(add-hook 'term-mode-hook
-          (lambda ()
-            (add-to-list 'term-bind-key-alist '("M-[" . multi-term-prev))
-            (add-to-list 'term-bind-key-alist '("M-]" . multi-term-next))))
-
-(add-hook 'term-mode-hook
-          (lambda ()
-            (setq term-buffer-maximum-size 0)))
-(add-hook 'term-mode-hook
-          (lambda ()
-            (setq show-trailing-whitespace nil)
-            (autopair-mode -1)))
-(defun last-term-buffer (l)
-  "Return most recently used term buffer."
-  (when l
-    (if (eq 'term-mode (with-current-buffer (car l) major-mode))
-        (car l) (last-term-buffer (cdr l)))))
-(defun get-term ()
-  "Switch to the term buffer last used, or create a new one if
-    none exists, or if the current buffer is already a term."
-  (interactive)
-  (let ((b (last-term-buffer (buffer-list))))
-    (if (or (not b) (eq 'term-mode major-mode))
-        (multi-term)
-      (switch-to-buffer b))))
-(global-set-key (kbd "\C-x\C-a") 'get-term)
-
-
-;; angular
-;; (require 'angular-mode)
-;; (require 'angular-html-mode)
-;; (add-to-list 'auto-mode-alist '("\\.js\\'" . angular-mode))
-;; (add-to-list 'auto-mode-alist '("\\.html\\'" . angular-html-mode))
-
-;;reactjs
-
 
 ;;rename current file
 (defun rename-current-file (new-name)
