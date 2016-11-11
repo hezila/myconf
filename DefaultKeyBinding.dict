@@ -1,10 +1,3 @@
-#!/bin/sh
-
-set -x
-
-mkdir ~/Library/KeyBindings
-cat > ~/Library/KeyBindings/DefaultKeyBinding.dict <<EOF
-EOF
 {
 /* Keybindings for emacs emulation.  Compiled by Jacob Rus.
  *
@@ -25,7 +18,6 @@ EOF
     "^ "        = "setMark:";                       /* C-Spc        Set mark */
     "^\@"       = "setMark:";                       /* C-@          Set mark */
     "^w"        = "deleteToMark:";                  /* C-w          Delete to mark */
-    "^y"        = "past:";                          /* C-y          Past */
 
     /* Incremental search. */
 /* Uncomment these lines If Incremental Search IM is installed */
@@ -73,4 +65,3 @@ EOF
     };
 
 }
-EOF
