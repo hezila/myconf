@@ -357,3 +357,6 @@ your recently and most frequently used commands.")
 
 ;; web-mode
 (add-to-list 'auto-mode-alist '("\\.xml\\'" . web-mode))
+
+
+(global-set-key [(meta g)] 'goto-line) ;; m-g 跳到某一行

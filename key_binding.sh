@@ -25,7 +25,7 @@ EOF
     "^ "        = "setMark:";                       /* C-Spc        Set mark */
     "^\@"       = "setMark:";                       /* C-@          Set mark */
     "^w"        = "deleteToMark:";                  /* C-w          Delete to mark */
-
+    "^y"        = "past:";                          /* C-y          Past */
 
     /* Incremental search. */
 /* Uncomment these lines If Incremental Search IM is installed */
@@ -43,7 +43,7 @@ EOF
     "~/"        = "complete:";                      /* M-/          Complete */
     "~c"        = ( "capitalizeWord:",              /* M-c          Capitalize */
                     "moveForward:",
-                    "moveForward:");                                
+                    "moveForward:");
     "~u"        = ( "uppercaseWord:",               /* M-u          Uppercase */
                     "moveForward:",
                     "moveForward:");
