@@ -41,7 +41,7 @@ I prefer [Oh my zsh](https://github.com/robbyrussell/oh-my-zsh)
 
 ### Emacs Setup
 
->>> 世界上有三种人，一种使用 Emacs，一种使用 vi，另一种包括其他所有人。
+> 世界上有三种人，一种使用 Emacs，一种使用 vi，另一种包括其他所有人。
 
     brew remove --force emacs
     brew brew install emacs --cocoa --use-git-head --HEAD

@@ -262,9 +262,6 @@ your recently and most frequently used commands.")
       (switch-to-buffer b))))
 (global-set-key (kbd "\C-x\C-a") 'get-term)
 
-(require 'jsx-mode)
-(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
-
 
 ;; angular
 ;; (require 'angular-mode)
@@ -274,31 +271,6 @@ your recently and most frequently used commands.")
 
 ;;reactjs
 
-;;web-mode
-(require 'web-mode)
-(setq web-mode-enable-auto-pairing t)
-(setq web-mode-enable-auto-closing t)
-(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
-(setq web-mode-content-types-alist
-			'(("jsx" . "\\.js[x]?\\'")))
-(defadvice web-mode-highlight-part (around tweak-jsx activate)
-  (if (equal web-mode-content-type "jsx")
-      (let ((web-mode-enable-part-face nil))
-        ad-do-it)
-		ad-do-it))
-
-(add-hook 'web-mode-hook
-          (lambda ()
-            (setq web-mode-html-offset   2)
-            (setq web-mode-markup-indent-offset 2)
-            (setq web-mode-css-indent-offset 2)
-            (setq web-mode-code-indent-offset 2)
-            ))
-;; (require 'yasnippet)
-;; (require 'react-snippets)
-;; (yas-global-mode 1)
 
 ;;rename current file
 (defun rename-current-file (new-name)
@@ -349,14 +321,6 @@ your recently and most frequently used commands.")
 (add-hook 'python-mode-hook 'guess-style-guess-tabs-mode)
 (add-hook 'python-mode-hook (lambda ()
                               (guess-style-guess-tab-width)))
-
-;;(require 'evil)
-;;(evil-mode 1)
-;;(setq evil-motion-state-modes (append evil-emacs-state-modes evil-motion-state-modes))
-;;(setq evil-emacs-state-modes nil)
-
-;; web-mode
-(add-to-list 'auto-mode-alist '("\\.xml\\'" . web-mode))
 
 
 (global-set-key [(meta g)] 'goto-line) ;; m-g 跳到某一行

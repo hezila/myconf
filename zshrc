@@ -20,8 +20,8 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 alias ll='ls -al'
-alias emacs='/usr/local/Cellar/emacs/HEAD/bin/emacs -nw'
-alias e='emacs -nw'
+alias emacsd='/usr/local/Cellar/emacs/HEAD/bin/emacs --daemon'
+alias emacs='/usr/local/Cellar/emacs/HEAD/bin/emacsclient -t'
 alias tailf='tail -f'
 alias gck="git checkout"
 alias gci="git commit"
