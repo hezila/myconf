@@ -19,7 +19,7 @@ export MANPATH=/opt/local/share/man:$MANPATH
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
-alias ll='ls -al'
+alias ll='ls -alh'
 alias emacsd='/usr/local/bin/emacs --daemon'
 alias emacs='/usr/local/bin/emacsclient -t'
 alias tailf='tail -f'

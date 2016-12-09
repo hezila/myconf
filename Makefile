@@ -6,7 +6,7 @@ macos_build:
 macos_install:
 	PWD=$(shell pwd)
 	mkdir -p ~/Library/KeyBindings
-	ln -svnf $(PWD)/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
+	ln -svnf $(PWD)/macos/DefaultKeyBinding.dict ~/Library/KeyBindings/DefaultKeyBinding.dict
 	ln -svnf $(PWD)/emacs $(HOME)/.emacs
 	ln -svnf $(PWD)/emacs.d $(HOME)/.emacs.d
 	ln -svnf $(PWD)/zsh_themes/dracula.zsh-theme $(HOME)/.oh-my-zsh/themes/dracula.zsh-theme
