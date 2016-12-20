@@ -19,7 +19,8 @@ if [ "$mem_inst" -ge "8589934592" ]; then
             echo "vm.compressor_mode reset to defaults"
         fi
             echo $action
-            launchctl $action /System/Library/LaunchDaemons/com.apple.dynamic_pager.plist
+            launchctl $action -w /System/Library/LaunchDaemons/com.apple.dynamic_pager.plist
+            rm /private/var/vm/swapfile*
 
     else
     echo "Less than 8Gb memory."
