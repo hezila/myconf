@@ -1,0 +1,6 @@
+alias up='cd ..'
+alias df='df -h'
+alias du='du -sh'
+alias la='ls -a'
+alias ll='ls -lah'
+alias lsd='ls -d */'
