@@ -27,6 +27,9 @@ alias gck="git checkout"
 alias gci="git commit"
 alias gb=$GOPATH/bin/gb
 
+alias pbcopy='xsel --clipboard --input'
+alias pbpaste='xsel --clipboard --output'
+
 #emacs 键位设定
 bindkey -e
 
