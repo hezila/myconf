@@ -1,4 +1,5 @@
 macos_build:
+	brew cask install squirrel
 	brew install git tmux zsh
 	brew brew install emacs --cocoa --use-git-head --HEAD
 	brew linkapps
@@ -12,9 +13,10 @@ macos_install:
 	ln -svnf $(PWD)/macos/zshrc $(HOME)/.zshrc
 
 linux_build:
-	sudo apt-get install git tmux zsh emacs
+	sudo apt-get install git tmux zsh emacs ibus-rime
 	wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh
 	sudo chsh -s `which zsh`
+
 
 linux_install:
 	PWD=$(shell pwd)
