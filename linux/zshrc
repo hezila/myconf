@@ -27,6 +27,8 @@ alias gck="git checkout"
 alias gci="git commit"
 alias gb=$GOPATH/bin/gb
 
+alias aria2c='aria2c -c -x 10 -s 10'
+
 alias pbcopy='xsel --clipboard --input'
 alias pbpaste='xsel --clipboard --output'
 
