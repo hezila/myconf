@@ -1,0 +1,57 @@
+Host ali_tstudy
+     HostName 123.57.228.14
+     Port 21012
+     User ebsp
+
+Host ali_tstudy_sandbox
+     HostName 123.57.228.14
+     Port 21012
+     User sandbox
+
+Host ali_app0
+     HostName 60.205.107.113
+     User ebsp
+
+Host ali_app0_sandbox
+     HostName 60.205.107.113
+     User sandbox
+
+Host ali_app1
+     HostName 182.92.132.131
+     User ebsp
+
+Host ali_app2
+     HostName 101.201.226.226
+     User sandbox
+
+Host ali_app3
+     HostName 101.201.226.239
+     User sandbox
+
+Host ali_relay1
+     HostName 101.201.220.113
+     User sandbox
+
+Host ali_relay2
+     HostName 47.93.161.154
+     User sandbox
+
+Host ali_relay3
+     HostName 101.201.54.210
+     User root
+
+Host ali_db1
+     HostName 101.201.199.8
+     User ebsp
+
+Host hkbu_42
+     HostName 158.182.151.42
+     User ebs
+
+Host hkbu_42_root
+     HostName 158.182.151.42
+     User root
+
+Host hkbu_43
+     HostName 158.182.151.43
+     User ebs
