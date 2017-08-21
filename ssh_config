@@ -10,15 +10,11 @@ Host ali_tstudy_sandbox
 
 Host ali_app0
      HostName 60.205.107.113
-     User ebsp
-
-Host ali_app0_sandbox
-     HostName 60.205.107.113
      User sandbox
 
 Host ali_app1
      HostName 182.92.132.131
-     User ebsp
+     User sandbox
 
 Host ali_app2
      HostName 101.201.226.226
